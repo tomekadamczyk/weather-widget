@@ -1,10 +1,12 @@
 import React from 'react';
+import Layout from './containers/Layout/layout';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      dsa
-    </div>
+    <Layout>
+      
+    </Layout>
   );
 }
 
