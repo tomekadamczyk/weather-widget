@@ -1,8 +1,7 @@
 import React from 'react';
+import { useStore } from 'react-redux';
 import styled from 'styled-components';
 import SingleParameter from '../SingleParameter/SingleParameter';
-
-const weatherParameters = ['hour', 'sky', 'temperature', 'rainfall', 'windDirection', 'windVelocity', 'pressure'];
 
 const FlexColumn = styled.div`
     display: flex;
@@ -26,6 +25,9 @@ const Day = styled.div`
 `;
 
 const ParametersGroup = ({weatherByDay}) => {
+    const store = useStore();
+    const weatherParameters = store.getState().weatherParameters;
+
     return (
         <FlexColumn>
             <Day>{weatherByDay.day}</Day>

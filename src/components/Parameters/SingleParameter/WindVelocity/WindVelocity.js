@@ -1,11 +1,6 @@
 import React from 'react';
+import { useStore } from 'react-redux';
 import styled from 'styled-components';
-
-const windVelocity = {
-  weak: 'Słaby',
-  medium: 'Umiar.',
-  strong: 'Silny'
-}
 
 const WindVelocityBlock = styled.div`
     display: flex;
@@ -23,6 +18,8 @@ const Velocity = styled.span`
 `;
 
 const WindVelocity = ({value}) => {
+    const store = useStore();
+    const windVelocity = store.getState().windVelocity;
 
     const getWindName = (value) => {
         let wind;
