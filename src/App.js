@@ -3,9 +3,11 @@ import Layout from './containers/Layout/layout';
 import styled from 'styled-components';
 import Legend from './components/Legend/Legend';
 import Parameters from './components/Parameters/Parameters';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const Dashboard = styled.div`
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
 `;
@@ -15,6 +17,8 @@ const LegendColumn = styled.div`
   flex-direction: column;
   width: 110px;
   border-right: 1px solid ${({theme}) => theme.colors.gray4};
+  box-shadow: 15px 1px 12px -10px ${({theme}) => theme.colors.gray5};
+  z-index: 9;
 `;
 
 const legendNames = {
@@ -51,7 +55,7 @@ const weather = [
     hours: [
       { id: 0, 
         parameters: [
-          {hour: '01:00'},
+          {hour: '00:00'},
           {sky: 'cloud'},
           {temperature: 1},
           {rainfall: 0.2},
@@ -61,7 +65,7 @@ const weather = [
       },
       { id: 1, 
         parameters: [
-          {hour: '02:00'},
+          {hour: '01:00'},
           {sky: 'rain'},
           {temperature: 7},
           {rainfall: 1.5},
@@ -81,7 +85,7 @@ const weather = [
       },
       { id: 3, 
         parameters: [
-          {hour: '02:00'},
+          {hour: '03:00'},
           {sky: 'rain'},
           {temperature: 15},
           {rainfall: 15},
@@ -91,7 +95,7 @@ const weather = [
       },
       { id: 4, 
         parameters: [
-          {hour: '02:00'},
+          {hour: '04:00'},
           {sky: 'rain'},
           {temperature: 20},
           {rainfall: 15},
@@ -101,7 +105,7 @@ const weather = [
       },
       { id: 5, 
         parameters: [
-          {hour: '02:00'},
+          {hour: '05:00'},
           {sky: 'rain'},
           {temperature: 10},
           {rainfall: 15},
@@ -111,7 +115,7 @@ const weather = [
       },
       { id: 6, 
         parameters: [
-          {hour: '02:00'},
+          {hour: '06:00'},
           {sky: 'rain'},
           {temperature: 10},
           {rainfall: 15},
@@ -121,7 +125,167 @@ const weather = [
       },
       { id: 7, 
         parameters: [
-          {hour: '02:00'},
+          {hour: '07:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 8, 
+        parameters: [
+          {hour: '08:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 9, 
+        parameters: [
+          {hour: '09:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 10, 
+        parameters: [
+          {hour: '10:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 11, 
+        parameters: [
+          {hour: '11:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 12, 
+        parameters: [
+          {hour: '12:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 13, 
+        parameters: [
+          {hour: '13:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 14, 
+        parameters: [
+          {hour: '14:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 15, 
+        parameters: [
+          {hour: '15:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 16, 
+        parameters: [
+          {hour: '16:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 17, 
+        parameters: [
+          {hour: '17:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 18, 
+        parameters: [
+          {hour: '18:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 19, 
+        parameters: [
+          {hour: '19:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 20, 
+        parameters: [
+          {hour: '20:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 21, 
+        parameters: [
+          {hour: '21:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 22, 
+        parameters: [
+          {hour: '22:00'},
+          {sky: 'rain'},
+          {temperature: 17},
+          {rainfall: 15},
+          {windDirection: windDirection.northWest},
+          {windVelocity: 14},
+          {pressure: 1014}]
+      },
+      { id: 23, 
+        parameters: [
+          {hour: '23:00'},
           {sky: 'rain'},
           {temperature: 17},
           {rainfall: 15},
@@ -153,28 +317,132 @@ const weather = [
           {windDirection: windDirection.southEastern},
           {windVelocity: 40},
           {pressure: 1014}]
+      },
+      { id: 3, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 4, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 5, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 6, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 7, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 8, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 9, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 10, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 11, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
+      },
+      { id: 12, 
+        parameters: [
+          {hour: '02:00'},
+          {sky: 'grad'},
+          {temperature: 19},
+          {rainfall: 0},
+          {windDirection: windDirection.southEastern},
+          {windVelocity: 40},
+          {pressure: 1014}]
       }
     ]
   }
 ]
 
+
+
 const App = () => {
 
   return (
-    <Layout>
-      <Dashboard>
-        <LegendColumn>
-          {weatherLegend.map(value => {
-            return <Legend 
-              key={`weatherLegend-${value.id}`}
-              id={value.id}
-              name={value.name}
-            />
-          })}
-        </LegendColumn>
-        <Parameters weather={weather} />
-      </Dashboard>
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <Dashboard>
+          <LegendColumn>
+            {weatherLegend.map(value => {
+              return <Legend 
+                key={`weatherLegend-${value.id}`}
+                id={value.id}
+                name={value.name}
+              />
+            })}
+          </LegendColumn>
+          <Parameters weather={weather} />
+        </Dashboard>
+      </Layout>
+    </Provider>
   );
 }
 
