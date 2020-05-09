@@ -7,6 +7,7 @@ import {windDirection} from './data/windDirection';
 import {weatherParameters} from './data/weatherParameters';
 import {windVelocity} from './data/windVelocity';
 import {scrollingMoveDirection} from './data/scrollingMoveDirection';
+import {skyForecast} from './data/skyForecast';
 
 const initialState = {
     scrollingMoveDirection: scrollingMoveDirection,
@@ -15,6 +16,7 @@ const initialState = {
     weather: weather,
     weatherParameters: weatherParameters,
     windVelocity: windVelocity,
+    skyForecast: skyForecast,
 };
 const middleware = [thunk];
 

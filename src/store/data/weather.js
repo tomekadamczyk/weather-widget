@@ -1,4 +1,5 @@
 import { windDirection } from './windDirection';
+import { skyForecast } from './skyForecast';
 
 export const weather = [
         { id: 0, 
@@ -6,18 +7,18 @@ export const weather = [
         hours: [
             { id: 0, 
             parameters: [
-                {hour: '00:00'},
-                {sky: 'cloud'},
-                {temperature: 1},
-                {rainfall: 0.2},
-                {windDirection: windDirection.south},
-                {windVelocity: 4},
-                {pressure: 1014}]
+                { hour: '00:00'},
+                { sky: skyForecast.clouds},
+                { temperature: 1},
+                { rainfall: 0.2},
+                { windDirection: windDirection.south},
+                { windVelocity: 4},
+                { pressure: 1014}]
             },
             { id: 1, 
             parameters: [
                 {hour: '01:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.rain},
                 {temperature: 7},
                 {rainfall: 1.5},
                 {windDirection: windDirection.west},
@@ -27,7 +28,7 @@ export const weather = [
             { id: 2, 
             parameters: [
                 {hour: '02:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.rain},
                 {temperature: 10},
                 {rainfall: 15},
                 {windDirection: windDirection.north},
@@ -37,7 +38,7 @@ export const weather = [
             { id: 3, 
             parameters: [
                 {hour: '03:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.snow},
                 {temperature: 15},
                 {rainfall: 15},
                 {windDirection: windDirection.eastern},
@@ -47,7 +48,7 @@ export const weather = [
             { id: 4, 
             parameters: [
                 {hour: '04:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.sun},
                 {temperature: 20},
                 {rainfall: 15},
                 {windDirection: windDirection.southEastern},
@@ -57,7 +58,7 @@ export const weather = [
             { id: 5, 
             parameters: [
                 {hour: '05:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.sun},
                 {temperature: 10},
                 {rainfall: 15},
                 {windDirection: windDirection.southWest},
@@ -67,7 +68,7 @@ export const weather = [
             { id: 6, 
             parameters: [
                 {hour: '06:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clean},
                 {temperature: 10},
                 {rainfall: 15},
                 {windDirection: windDirection.northEastern},
@@ -77,7 +78,7 @@ export const weather = [
             { id: 7, 
             parameters: [
                 {hour: '07:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.rain},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -87,7 +88,7 @@ export const weather = [
             { id: 8, 
             parameters: [
                 {hour: '08:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.snow},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -97,7 +98,7 @@ export const weather = [
             { id: 9, 
             parameters: [
                 {hour: '09:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.snow},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -107,7 +108,7 @@ export const weather = [
             { id: 10, 
             parameters: [
                 {hour: '10:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.sun},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -117,7 +118,7 @@ export const weather = [
             { id: 11, 
             parameters: [
                 {hour: '11:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.sun},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -127,7 +128,7 @@ export const weather = [
             { id: 12, 
             parameters: [
                 {hour: '12:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clean},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -137,7 +138,7 @@ export const weather = [
             { id: 13, 
             parameters: [
                 {hour: '13:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.sun},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -147,7 +148,7 @@ export const weather = [
             { id: 14, 
             parameters: [
                 {hour: '14:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clean},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -157,7 +158,7 @@ export const weather = [
             { id: 15, 
             parameters: [
                 {hour: '15:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clouds},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -167,7 +168,7 @@ export const weather = [
             { id: 16, 
             parameters: [
                 {hour: '16:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clouds},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -177,7 +178,7 @@ export const weather = [
             { id: 17, 
             parameters: [
                 {hour: '17:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clouds},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -187,7 +188,7 @@ export const weather = [
             { id: 18, 
             parameters: [
                 {hour: '18:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clean},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -197,7 +198,7 @@ export const weather = [
             { id: 19, 
             parameters: [
                 {hour: '19:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.rain},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -207,7 +208,7 @@ export const weather = [
             { id: 20, 
             parameters: [
                 {hour: '20:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.rain},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -217,7 +218,7 @@ export const weather = [
             { id: 21, 
             parameters: [
                 {hour: '21:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.sun},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -227,7 +228,7 @@ export const weather = [
             { id: 22, 
             parameters: [
                 {hour: '22:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.clean},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -237,7 +238,7 @@ export const weather = [
             { id: 23, 
             parameters: [
                 {hour: '23:00'},
-                {sky: 'rain'},
+                {sky: skyForecast.rain},
                 {temperature: 17},
                 {rainfall: 15},
                 {windDirection: windDirection.northWest},
@@ -251,8 +252,8 @@ export const weather = [
         hours: [
             { id: 0, 
             parameters: [
-                {hour: '01:00'},
-                {sky: 'snow'},
+                {hour: '00:00'},
+                {sky: skyForecast.clean},
                 {temperature: 4},
                 {rainfall: 10},
                 {windDirection: windDirection.southEastern},
@@ -261,8 +262,8 @@ export const weather = [
             },
             { id: 1, 
             parameters: [
-                {hour: '02:00'},
-                {sky: 'grad'},
+                {hour: '01:00'},
+                {sky: skyForecast.clean},
                 {temperature: 19},
                 {rainfall: 0},
                 {windDirection: windDirection.southEastern},
