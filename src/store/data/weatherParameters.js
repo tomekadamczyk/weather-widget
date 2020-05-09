@@ -1,0 +1,1 @@
+export const weatherParameters = ['hour', 'sky', 'temperature', 'rainfall', 'windDirection', 'windVelocity', 'pressure'];

@@ -1,13 +1,20 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-
 import pointPositions from './reducers';
+import {weather} from './data/weather';
+import {legendNames} from './data/legendNames';
+import {windDirection} from './data/windDirection';
+import {weatherParameters} from './data/weatherParameters';
+import {windVelocity} from './data/windVelocity';
+import {scrollingMoveDirection} from './data/scrollingMoveDirection';
 
 const initialState = {
-    scrollingMoveDirection: {
-        left: 'left',
-        right: 'right'
-    }
+    scrollingMoveDirection: scrollingMoveDirection,
+    windDirection: windDirection,
+    legendNames: legendNames,
+    weather: weather,
+    weatherParameters: weatherParameters,
+    windVelocity: windVelocity,
 };
 const middleware = [thunk];
 
