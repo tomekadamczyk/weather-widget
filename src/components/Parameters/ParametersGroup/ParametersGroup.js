@@ -31,10 +31,10 @@ const ParametersGroup = ({weatherByDay}) => {
             <Day>{weatherByDay.day}</Day>
             <Flex>
                 {weatherByDay.hours.map((dayWeather, index) => {
-                    return <ParametersColumn>
+                    return <ParametersColumn key={`weatherday-${index}`}>
                         {dayWeather.parameters.map((value, index) => {
                         const valueKey = weatherParameters[index];
-                        return <div><SingleParameter parameterType={valueKey} value={value[valueKey]} /></div>;
+                        return <div key={`${value}-${index}`}><SingleParameter parameterType={valueKey} value={value[valueKey]} /></div>;
                     })}
                     </ParametersColumn>
                 })}

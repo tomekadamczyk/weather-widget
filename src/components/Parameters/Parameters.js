@@ -9,8 +9,8 @@ const Group = styled.div`
 const Parameters = ({weather}) => {
     return (
         <Group>
-            {weather.map(byDay => {
-                return <ParametersGroup weatherByDay={byDay}>
+            {weather.map((byDay, index) => {
+                return <ParametersGroup key={`day-${index}`} weatherByDay={byDay}>
                 </ParametersGroup>
             })}
         </Group>
