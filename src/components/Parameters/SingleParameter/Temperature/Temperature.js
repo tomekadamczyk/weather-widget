@@ -49,7 +49,7 @@ const Temperature = ({value}) => {
             const topPosition = degreePoint.current.getBoundingClientRect().top;
             const leftPosition = degreePoint.current.getBoundingClientRect().left;
         }
-    })
+    },[value])
 
 
     return (
