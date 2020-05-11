@@ -10,7 +10,7 @@ All required data occurs in store/data directory in files:
 3. weatherParameters.js - contains names for weather parameters,
 4. windDirection.js - contains names of wind directions,
 5. windVelocity.js - contains names for wind velocity ranges.
-6. weather.js - contains weather objects divided by day and hour. This file import necessary constants with parameters name,
+6. weather.js - contains weather objects divided by day and hour. This file imports necessary constants with parameters names,
 
 To create new weather forecast object:
 
