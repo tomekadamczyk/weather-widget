@@ -14,7 +14,7 @@ const RainfallBlock = styled.div`
 
 const RainfallDiagram = styled.div`
     width: 100%;
-    height: ${({height}) => `${height}px`};
+    height: ${({height}) => `${height * 10}px`};
     background-color: ${({theme}) => theme.colors.blue};
 `;
 
