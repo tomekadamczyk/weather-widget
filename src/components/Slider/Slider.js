@@ -92,7 +92,6 @@ const Slider = ({children}) => {
                 onMouseUp={() => resetMouseDown()}
                 onMouseMove={(e) => mouseMove(slider.current, e)}
                 onTouchStart={(e) => mouseDown(slider.current, e)} 
-                onTouchEnd={() => resetMouseDown()}
                 onTouchMove={(e) => mouseMove(slider.current, e)}
             >
                 {children}
