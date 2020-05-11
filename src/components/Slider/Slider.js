@@ -91,8 +91,6 @@ const Slider = ({children}) => {
                 onMouseDown={(e) => mouseDown(slider.current, e)} 
                 onMouseUp={() => resetMouseDown()}
                 onMouseMove={(e) => mouseMove(slider.current, e)}
-                onTouchStart={(e) => mouseDown(slider.current, e)} 
-                onTouchMove={(e) => mouseMove(slider.current, e)}
             >
                 {children}
             <OverLay></OverLay>
