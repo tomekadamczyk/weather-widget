@@ -31,3 +31,6 @@ To create new weather forecast object:
         }
     ```
 3. Save the file
+
+## Build
+### To build project please type 'npm run build'.
