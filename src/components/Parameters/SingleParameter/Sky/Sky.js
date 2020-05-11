@@ -19,7 +19,10 @@ const Sky = ({value}) => {
 
     return (
         <SkyBlock>
-            <Icon src={cloud} alt={value} />
+            <Icon
+                src={cloud}
+                alt={value}
+            />
         </SkyBlock>
     )
 }

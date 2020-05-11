@@ -49,24 +49,41 @@ const Parameter = styled.div`
     ${({parameterType}) => styleById(parameterType)};
 `;
 
-const SingleParameter = ({value, parameterType}) => {
+const SingleParameter = ({value, parameterType, subsequentItemValue}) => {
 
     const renderParameter = (type) => {
         switch(type) {
             case 'hour':
                 return <Hour value={value} />
+                
             case 'sky':
                 return <Sky value={value} />
+                
             case 'temperature':
-                return <Temperature value={value}/>
+                return <Temperature
+                    subsequentItemValue={subsequentItemValue}
+                    value={value}
+                    parameterType={parameterType}
+                    unit={'\xB0'}
+                />
+                
             case 'rainfall':
                 return <Rainfall value={value} />
+                
             case 'windDirection':
                 return <WindDirection value={value} />
+                
             case 'windVelocity':
                 return <WindVelocity value={value} />
+                
             case 'pressure':
-                return <Pressure value={value} />
+                return <Pressure
+                    subsequentItemValue={subsequentItemValue}
+                    value={value}
+                    parameterType={parameterType}
+                    unit={'hPa'}
+                />
+                
             default:
                 return 'Brak dostępnych danych';
         }

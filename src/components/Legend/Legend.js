@@ -40,7 +40,7 @@ const LegendItem = styled.div`
     margin: 0 auto;
     text-align: center;
     word-wrap: anywhere;
-    font-weight: ${({theme}) => theme.font.regular};
+    font-weight: ${({theme}) => theme.font.bold};
     color: ${({theme}) => theme.colors.gray};
     ${({itemType}) => styleById(itemType)}
     &:not(:last-of-type) {

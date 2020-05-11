@@ -51,7 +51,11 @@ const WindDirection = ({value}) => {
 
     return (
         <WindDirectionBlock>
-            <Icon src={arrowBlack} alt={value} param={value} />
+            <Icon 
+                src={arrowBlack} 
+                alt={value} 
+                param={value}
+            />
             <WindDescription>{value}</WindDescription>
         </WindDirectionBlock>
     )
